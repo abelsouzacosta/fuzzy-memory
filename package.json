@@ -1,0 +1,8 @@
+{
+  "name": "tdd-ts-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:abelsouzacosta/fuzzy-memory.git",
+  "author": "Abel Souza <abelsouzacosta@gmail.com>",
+  "license": "MIT"
+}
