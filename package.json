@@ -32,6 +32,8 @@
     "@prisma/client": "^3.2.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
+    "test:unit": "yarn test -- --watchAll -c jest-unit-config.ts",
+    "test:integration": "yarn test -- --watchAll -c jest-integration-config.ts"
   }
 }
