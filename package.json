@@ -10,11 +10,15 @@
     "@commitlint/config-conventional": "^13.2.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
-    "husky": "4"
+    "husky": "4",
+    "prisma": "^3.2.1"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@prisma/client": "^3.2.1"
   }
 }
