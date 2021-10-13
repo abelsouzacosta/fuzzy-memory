@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { MissingParamError } from '../../presentation/errors/MissingParamError';
+import { MissingParamError } from '@presentationErrors/MissingParamError';
 
 interface ICreateUser {
   name: string;

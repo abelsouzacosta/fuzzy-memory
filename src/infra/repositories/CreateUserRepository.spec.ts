@@ -1,5 +1,5 @@
-import client from '../../client/client';
-import { MissingParamError } from '../../presentation/errors/MissingParamError';
+import client from '@client/client';
+import { MissingParamError } from '@presentationErrors/MissingParamError';
 import CreateUserRepository from './CreateUserRepository';
 
 const makeSut = () => {

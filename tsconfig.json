@@ -3,13 +3,18 @@
     "target": "es5", 
     "lib": ["es6"],                                   
     "module": "commonjs",                                
-    "rootDir": "src",                           
+    "rootDir": ".",                           
     "resolveJsonModule": true,                        
     "outDir": "build",  
     "esModuleInterop": true,                       
     "forceConsistentCasingInFileNames": true,           
     "strict": true,                                   
     "noImplicitAny": true,                             
-    "skipLibCheck": true         
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@client/*": ["./src/client/*"],
+      "@presentationErrors/*": ["./src/presentation/errors/*"]
+    }         
   }
 }
