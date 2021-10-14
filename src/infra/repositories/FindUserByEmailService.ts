@@ -1,10 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 import { MissingParamError } from '@utilErrors/MissingParamError';
 
-interface ICreateUser {
-  name: string;
+interface IFindUser {
   email: string;
-  password: string;
 }
 
 interface IReturn {
@@ -14,31 +12,21 @@ interface IReturn {
   password: string;
 }
 
-export default class CreateUserRepository {
+export default class FindUserByEmailService {
   private client: PrismaClient;
 
   constructor(client: PrismaClient) {
     this.client = client;
   }
 
-  async execute({ name, email, password }: ICreateUser): Promise<IReturn> {
-    if (!name || name === '') {
-      throw new MissingParamError('name');
-    }
-
+  async execute({ email }: IFindUser): Promise<IReturn | null> {
     if (!email || email === '') {
       throw new MissingParamError('email');
     }
 
-    if (!password || password === '') {
-      throw new MissingParamError('password');
-    }
-
-    const user = this.client.user.create({
-      data: {
-        name,
+    const user = await this.client.user.findFirst({
+      where: {
         email,
-        password,
       },
     });
 

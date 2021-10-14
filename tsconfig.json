@@ -14,7 +14,8 @@
     "baseUrl": "./",
     "paths": {
       "@client/*": ["./src/client/*"],
-      "@presentationErrors/*": ["./src/presentation/errors/*"]
+      "@presentationErrors/*": ["./src/presentation/errors/*"],
+      "@utilErrors/*": ["./src/utils/errors/*"]
     }         
   }
 }

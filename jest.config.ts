@@ -8,5 +8,6 @@ export default {
   moduleNameMapper: {
     '@presentationErrors/(.*)': '<rootDir>/src/presentation/errors/$1',
     '@client/(.*)': '<rootDir>/src/client/$1',
+    '@utilErrors/(.*)': '<rootDir>/src/utils/errors/$1',
   },
 };
